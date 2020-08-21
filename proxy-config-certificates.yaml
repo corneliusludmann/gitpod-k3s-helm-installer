@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: proxy-config-certificates
+  labels:
+    app: gitpod
+data:
+  chain.pem: $CHAIN
+  dhparams.pem: $DHPARAMS
+  fullchain.pem: $FULLCHAIN
+  privkey.pem: $PRIVKEY
